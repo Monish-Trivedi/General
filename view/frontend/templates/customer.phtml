@@ -1,0 +1,6 @@
+<?php
+$id = $this->getRequest()->getParam('id');
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$customer = $objectManager->create('Magento\Customer\Model\Customer')->load($id);
+echo $customer->getFirstname(); //Print Customer First Name
