@@ -1,13 +1,31 @@
+<style>
+table {  font-family: arial, sans-serif;  border-collapse: collapse;  width: 100%;  margin-top: 30px;}
+td, th {  border: 1px solid #dddddd;  text-align: left;  padding: 8px;  }
+tr:nth-child(even) { background-color: #dddddd; }
+.product-id{width:2%}.product-name{width:30%} .product-sku{width:30%}
+
+</style>
+
+<table>
+  <tr>
+    <th class="product-id">Id</th>
+    <th class="product-name">Product Name</th>
+    <th class="product-sku">SKU</th>
+  </tr>
+
 <?php
 //$sku = '';
-$id = $this->getRequest()->getParam('id');
+	$id = $this->getRequest()->getParam('id');
 
-$_product = $block->getProductById($id);
+	$_product = $block->getProductById($id);
 
-echo $_product->getEntityId();
-echo '<br />';
-echo $_product->getName();
-echo '<br />';
-echo $_product->getSku();
-
+	echo '<tr>             
+	        <td>'.$_product->getEntityId().'</td>
+	        <td>'.$_product->getName().'</td>	      
+	        <td>'.$_product->getSku().'</td>
+	      </tr>';
 ?>
+</table>
+
+</body>
+</html>
