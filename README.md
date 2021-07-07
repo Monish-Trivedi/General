@@ -1,7 +1,7 @@
 # General
 <pre>
- <li> Here display product name and sku by product Id, 1 is product id
-      {{storefront-url}}/general/product/view?id=1, use Magento/Catalog/Mode/Product
+ <li> Here display product name and sku by product Id, 1 is product id, Use factory class concept to load product by Id
+      {{storefront-url}}/general/product/view?id=1, use Magento/Catalog/Mode/ProductFactory
       
  <li> Here display all products name and sku, use magento product collection
       {{storefront-url}}/general/product/viewall
